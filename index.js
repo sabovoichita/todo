@@ -9,3 +9,5 @@ const tasksContainer = document.getElementById("tasks-container");
 const titleInput = document.getElementById("title-input");
 const dateInput = document.getElementById("date-input");
 const descriptionInput = document.getElementById("description-input");
+const taskData = [];
+let currentTask = {};
