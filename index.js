@@ -24,11 +24,15 @@ const addOrUpdateTask = () => {
     return;
   }
   const dataArrIndex = taskData.findIndex((item) => item.id === currentTask.id);
+
   const taskObj = {
-    id: `${titleInput.value.toLowerCase().split(" ").join("-")}-${Date.now()}`,
-    title: titleInput.value,
-    date: dateInput.value,
-    description: descriptionInput.value,
+    id: `${removeSpecialChars(titleInput.value)
+      .toLowerCase()
+      .split(" ")
+      .join("-")}-${Date.now()}`,
+    title: removeSpecialChars(titleInput.value),
+    date: removeSpecialChars(dateInput.value),
+    description: removeSpecialChars(descriptionInput.value),
   };
 
   if (dataArrIndex === -1) {
