@@ -54,6 +54,8 @@ const deleteTask = (buttonEl) => {
   taskData.splice(dataArrIndex, 1);
 };
 
+const editTask = (buttonEl) => {};
+
 // function to clear the input fields
 const reset = () => {
   titleInput.value = "";
