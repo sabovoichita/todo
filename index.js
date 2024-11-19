@@ -48,6 +48,8 @@ taskForm.addEventListener("submit", (e) => {
     //used an addition assignment to set the innerHTML of tasksContainer to empty backticks.
     tasksContainer.innerHTML += `
     <div class="task" id="${id}"></div>
+    <p><strong>Title:</strong>${title}</p>
+
     `;
   });
 
