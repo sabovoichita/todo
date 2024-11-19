@@ -13,6 +13,19 @@ const descriptionInput = document.getElementById("description-input");
 const taskData = [];
 let currentTask = {};
 
+const addOrUpdateTask = () => {
+  const dataArrIndex = taskData.findIndex((item) => item.id === currentTask.id);
+  const taskObj = {
+    id: `${titleInput.value.toLowerCase().split(" ").join("-")}-${Date.now()}`,
+    title: titleInput.value,
+    date: dateInput.value,
+    description: descriptionInput.value,
+  };
+  if (dataArrIndex === -1) {
+    taskData.unshift(taskObj);
+  }
+};
+
 // function to clear the input fields
 const reset = () => {
   titleInput.value = "";
@@ -48,18 +61,7 @@ discardBtn.addEventListener("click", () => {
 
 taskForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  const dataArrIndex = taskData.findIndex((item) => item.id === currentTask.id);
-  const taskObj = {
-    id: `${titleInput.value.toLowerCase().split(" ").join("-")}- ${Date.now()}`,
-    title: titleInput.value,
-    date: dateInput.value,
-    description: descriptionInput.value,
-  };
-  //if new task
-  if (dataArrIndex === -1) {
-    //unshift()-used to add one or more elements to the beginning of an array.
-    taskData.unshift(taskObj);
-  }
+
   //display the task on the page by looping through it.
   taskData.forEach(({ id, title, date, description }) => {
     //used an addition assignment to set the innerHTML of tasksContainer to empty backticks.
