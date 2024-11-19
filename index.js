@@ -43,5 +43,8 @@ taskForm.addEventListener("submit", (e) => {
     //unshift()-used to add one or more elements to the beginning of an array.
     taskData.unshift(taskObj);
   }
+  //display the task on the page by looping through it.
+  taskData.forEach(({ id, title, date, description }) => {});
+
   //   console.log(taskObj);
 });
