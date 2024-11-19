@@ -46,7 +46,9 @@ taskForm.addEventListener("submit", (e) => {
   //display the task on the page by looping through it.
   taskData.forEach(({ id, title, date, description }) => {
     //used an addition assignment to set the innerHTML of tasksContainer to empty backticks.
-    tasksContainer.innerHTML += ``;
+    tasksContainer.innerHTML += `
+    <div class="task" id="${id}"></div>
+    `;
   });
 
   //   console.log(taskObj);
