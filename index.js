@@ -46,6 +46,8 @@ const updateTaskContainer = () => {
   });
 };
 
+const deleteTask = (buttonEl) => {};
+
 // function to clear the input fields
 const reset = () => {
   titleInput.value = "";
