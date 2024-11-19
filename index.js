@@ -55,6 +55,7 @@ taskForm.addEventListener("submit", (e) => {
         <button type="button" class="btn">Delete</button>
         </div>`;
   });
-
+  //  close the form modal to view the task
+  taskForm.classList.toggle("hidden");
   //   console.log(taskObj);
 });
