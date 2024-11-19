@@ -59,6 +59,10 @@ const editTask = (buttonEl) => {
     (item) => item.id === buttonEl.parentElement.id
   );
   currentTask = taskData[dataArrIndex];
+  currentTask = taskData[dataArrIndex];
+  titleInput.value = currentTask.title;
+  dateInput.value = currentTask.date;
+  descriptionInput.value = currentTask.description;
 };
 
 // function to clear the input fields
