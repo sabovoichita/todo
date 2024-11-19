@@ -38,5 +38,10 @@ taskForm.addEventListener("submit", (e) => {
     date: dateInput.value,
     description: descriptionInput.value,
   };
+  //if new task
+  if (dataArrIndex === -1) {
+    //unshift()-used to add one or more elements to the beginning of an array.
+    taskData.unshift(taskObj);
+  }
   //   console.log(taskObj);
 });
