@@ -75,6 +75,7 @@ const editTask = (buttonEl) => {
 
 // function to clear the input fields
 const reset = () => {
+  addOrUpdateTaskBtn.innerText = "Add Task";
   titleInput.value = "";
   dateInput.value = "";
   descriptionInput.value = "";
